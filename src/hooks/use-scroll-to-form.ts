@@ -3,7 +3,9 @@
 
 export function useScrollToForm() {
   const handleScrollToForm = () => {
-    document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth' });
+    if (typeof document !== 'undefined') {
+      document.getElementById('registration-form')?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
   
   return handleScrollToForm;

@@ -3,7 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
-  title: 'דַּבֵּר בְּבִטְחָה - Speak Confidently',
+  metadataBase: new URL('https://alefacademai.com'),
+  title: 'ALEF PRESENT',
   description: 'ورشة Alef العملية – تدريب عملي لتجاوب بثقة على أصعب الأسئلة – وتخرج بفيديو تعريفي احترافي!',
   openGraph: {
     title: 'דַּבֵּר בְּבִטְחָה - Speak Confidently',
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="ar" dir="rtl">
       <head>
+        <link rel="icon" href="/images/alef-logo2.jpeg" type="image/png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=Belleza&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet" />

@@ -33,14 +33,16 @@ export function WhatYouWillLearnSection() {
                 {learningFeatures.map((feature, index) => {
                   const imageEl = (
                     <div className="relative h-[300px] w-[300px] mx-auto">
-                      <Image
-                        src={feature.imageSrc}
-                        alt={feature.title}
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-lg shadow-xl"
-                        data-ai-hint={feature.aiHint}
-                      />
+                      <div className="relative w-full aspect-[4/3] rounded-lg shadow-xl overflow-hidden">
+                        <Image
+                          src={feature.imageSrc}
+                          alt={feature.title}
+                          fill
+                          className="rounded-lg"
+                          style={{ objectFit: 'cover' }}
+                          data-ai-hint={feature.aiHint}
+                        />
+                      </div>
                     </div>
                   );
 
@@ -79,14 +81,14 @@ export function WhatYouWillLearnSection() {
         <div className="lg:hidden space-y-8">
           {learningFeatures.map((feature) => (
             <Card key={feature.title} className="overflow-hidden bg-card border-primary/20 shadow-lg max-w-sm mx-auto">
-              <div className="p-4">
-                <div className="relative h-[200px]">
+              <div className="flex flex-col items-center p-4">
+                <div className="relative w-full max-w-xs aspect-[4/3] mx-auto rounded-md overflow-hidden">
                   <Image
                     src={feature.imageSrc}
                     alt={feature.title}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
                     className="rounded-md"
+                    style={{ objectFit: 'cover' }}
                     data-ai-hint={feature.aiHint}
                   />
                 </div>

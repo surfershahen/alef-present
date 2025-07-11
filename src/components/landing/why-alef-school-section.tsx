@@ -47,8 +47,8 @@ export function WhyAlefAcademySection() {
           transition={{ duration: 40, repeat: Infinity, ease: "linear", delay: 5 }}
       />
       
-      <SectionHeader title="لماذا Alef Academy؟" className="mb-12"/>
-      
+      <SectionHeader title="ليش Alef Academy؟" className="mb-12"/>
+
       <motion.div 
           className="grid grid-cols-1 md:grid-cols-3 gap-8"
           variants={containerVariants}

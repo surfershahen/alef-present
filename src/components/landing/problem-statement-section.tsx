@@ -1,11 +1,14 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { LottiePlayer } from "@/components/shared/lottie-player";
+import dynamic from 'next/dynamic';
 import { motion, type Variants } from "framer-motion";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { SectionHeader } from "@/components/shared/section-header";
 import { problemStatement } from "@/data/problem-statement";
+import { AlertTriangle, Trophy } from "lucide-react";
+
+
 
 const MotionCard = motion(Card);
 
@@ -48,7 +51,7 @@ export function ProblemStatementSection() {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <CardHeader>
-              <LottiePlayer src={problemStatement.before.lottieSrc} className="w-24 h-24 mx-auto" />
+              <AlertTriangle className="mx-auto mb-2 h-8 w-8 text-yellow-500" />
               <CardTitle className="font-headline text-2xl pt-4">{problemStatement.before.title}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-muted-foreground">
@@ -63,7 +66,7 @@ export function ProblemStatementSection() {
             transition={{ type: "spring", stiffness: 400, damping: 10 }}
           >
             <CardHeader>
-              <LottiePlayer src={problemStatement.after.lottieSrc} className="w-24 h-24 mx-auto" />
+              <Trophy className="mx-auto mb-2 h-8 w-8 text-green-600" />
               <CardTitle className="font-headline text-2xl pt-4">{problemStatement.after.title}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-3 text-muted-foreground">

@@ -3,7 +3,7 @@ export const problemStatement = {
   description: "لأننا منعرف الصعوبات الي بتواجه الطلاب العرب بالمقابلات بالعبري. هاي فرصتك تتغلب عليها.",
   before: {
     title: "الوضع الحالي: تردد وارتباك",
-    lottieSrc: "https://lottie.host/8e112194-e69f-4322-a052-d1d8df034f8e/YAs05gAJih.json",
+    
     points: [
       "\"אה... אני... למדתי ב...\"",
       "صعوبة في التعبير عن القدرات والخبرات.",
@@ -13,7 +13,7 @@ export const problemStatement = {
   },
   after: {
     title: "بعد الورشة: ثقة واحترافية",
-    lottieSrc: "https://lottie.host/e2c39171-331e-42b9-be1a-d4a8159d7b42/s5k8q8yD1x.json",
+    
     points: [
       "\"שמי... ואני מביא/ה איתי ניסיון ב...\"",
       "القدرة على عرض المهارات بطلاقة.",

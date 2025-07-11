@@ -1,3 +1,5 @@
+"use client";
+
 import { HeroSection } from '@/components/landing/hero-section';
 import { ProblemStatementSection } from '@/components/landing/problem-statement-section';
 import { WhatYouWillLearnSection } from '@/components/landing/what-you-will-learn-section';

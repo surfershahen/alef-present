@@ -98,7 +98,7 @@ export function OfferSection() {
 
             <FadeIn delay={0.5}>
               <Button onClick={scrollToForm} size="lg" className="w-full md:w-auto font-bold text-lg px-10 py-7 shadow-lg hover:shadow-xl transition-shadow duration-300 group">
-                نعم، أريد حجز مكاني الآن!
+              متحمس احجز مكاني الان!
                 <ArrowLeft className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
               </Button>
               <p className="text-sm text-foreground mt-4">المقاعد محدودة لضمان جودة التدريب.</p>

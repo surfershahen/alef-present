@@ -137,7 +137,7 @@ export function RegistrationFormSection() {
                                     )}
                                 />
                                 <Button type="submit" size="lg" className="w-full font-bold text-lg py-6 shadow-lg hover:shadow-xl transition-shadow duration-300 group">
-                                    تأكيد التسجيل المبدئي
+                                بدي احجز مكاني الان!
                                     <ArrowLeft className="mr-2 h-5 w-5 transition-transform group-hover:-translate-x-1" />
                                 </Button>
                             </form>
