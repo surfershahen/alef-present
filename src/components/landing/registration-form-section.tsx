@@ -20,6 +20,7 @@ import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
 import { SectionWrapper } from "@/components/shared/section-wrapper";
 import { FadeIn } from "@/components/shared/fade-in";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "الاسم يجب أن يحتوي على حرفين على الأقل." }),
@@ -30,6 +31,7 @@ const formSchema = z.object({
 
 export function RegistrationFormSection() {
     const { toast } = useToast();
+    const router = useRouter();
 
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
@@ -41,7 +43,7 @@ export function RegistrationFormSection() {
         },
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
+    async function onSubmit(values: z.infer<typeof formSchema>) {
         console.log(values);
         toast({
             title: "تم التسجيل بنجاح!",
@@ -50,6 +52,17 @@ export function RegistrationFormSection() {
             duration: 5000,
         });
         form.reset();
+        try {
+            await fetch("/api/lead", {
+                method: "POST",
+                body: JSON.stringify(values),
+                headers: { "Content-Type": "application/json" },
+            });
+        } catch (e) {
+            // Optionally handle/report error
+            console.error("Failed to send lead to Google Sheets", e);
+        }
+        window.location.href = "https://private.invoice4u.co.il/newsite/he/clearing/public/i4u-payment?ProductGuid=e231bc95-0251-4c43-ba9a-59e85fff1dd5";
     }
 
     return (
